@@ -1,8 +1,10 @@
 import { FC } from "react";
+import { Link, NavLink } from "react-router-dom";
 import fingers from "../../assets/ThirdMission.png";
 import bag from "../../assets/bag.png";
 import chart from "../../assets/chart.png";
 import money from "../../assets/money.png";
+import { Button, Classes, Popover } from "@blueprintjs/core"
 import "./ThirdMission.scss";
 
 export const ThirdMission: FC = () => {
@@ -15,11 +17,27 @@ export const ThirdMission: FC = () => {
                      УНИВЕРСИТЕТОВ</span>
                 </li>
                 <li>
-                    <a 
+                    {/* <a 
                         href="https://google.com" 
                         className="dicamp-thirdMission_ul_a">
                         Что такое "третья миссия"
-                    </a>
+                    </a> */}
+                <div>
+                    <Popover
+                        content={
+                            <div className="dicamp-thirdMission_ul_popover">
+                                <p className="dicamp-thirdMission_ul_p">
+                                    Главная цель третьей миссии — интеграция университетов в региональные <br/> и местные программы 
+                                    развития, передача знаний и технологий, а также <br/> развитие инноваций, предпринимательской культуры 
+                                    и человеческого капитала.
+                                </p>
+                            </div>}
+                            placement="bottom">
+                            <a className="dicamp-thirdMission_ul_a">
+                                Что такое "третья миссия"
+                            </a>
+                    </Popover>
+                </div>
                 </li>
             </ul>
             <img 

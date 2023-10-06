@@ -1,20 +1,17 @@
 import { FC } from "react";
-import { Link } from "react-router-dom";
 import { Header } from "../../components/Header/Header";
 import { ThirdMission } from "../../components/ThirdMission/ThirdMission";
 import { Statistics } from "../../components/Statistics/Statistics";
+import { Footer } from "../../components/Footer/Footer";
 
 export const StudentsPage: FC = () => {
   return (
     <div>
       <Header />
       <ThirdMission />
-      <div
-        style={{
-          height: "1944px",
-        }}
-      ></div>
+      <div style={{ height: "1956px" }}></div>
       <Statistics />
+      <Footer />
     </div>
   );
 };

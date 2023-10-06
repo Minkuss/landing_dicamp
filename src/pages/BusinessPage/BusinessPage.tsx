@@ -4,6 +4,7 @@ import { Header } from "../../components/Header/Header";
 import { ThirdMission } from "../../components/ThirdMission/ThirdMission";
 import { Business } from "../../components/Business/Business";
 import { SendRequest } from "../../components/SendRequest/SendRequest";
+import { Footer } from "../../components/Footer/Footer";
 
 export const BusinessPage: FC = () => {
   return (
@@ -17,6 +18,7 @@ export const BusinessPage: FC = () => {
         }}
       ></div>
       <SendRequest />
+      <Footer />
     </div>
   );
 };
