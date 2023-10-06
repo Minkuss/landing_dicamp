@@ -1,8 +1,11 @@
 .sending-req {
   background: url("../../assets/background_req.png"), lightgray 50% / cover no-repeat;
   mix-blend-mode: multiply;
-  height: 1301px;
+  height: 760px;
+  display: flex;
+  justify-content: space-around;
   .sending-req_info {
+    margin-top: 100px;
     .sending-req_info_p {
       color: #000;
       font-family: Angry;
@@ -10,6 +13,43 @@
       font-style: normal;
       font-weight: 400;
       line-height: 140%;
+      .sending-req_info_p_span1 {
+        display: inline-block;
+        background: #EAD61E;
+        transform: rotate(1deg);
+      }
+      .sending-req_info_p_span2 {
+        display: inline-block;
+        background: #EAD61E;
+        transform: rotate(-1deg);
+      }
+    }
+    .sending-req_info_p2 {
+      max-width: 540px;
+      color: #000;
+      font-family: Circe;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+    }
+    .sending-req_info_img {
+      position: absolute;
+      top: 5055px;
+      left: 344px;
+      width: 525px;
+      height: 330px;
+    }
+  }
+  .sending-req_form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-top: 100px;
+    .sending-req_form_inp {
+      all: unset;
+      border: 1px solid #000;
+      height: 60px;
     }
   }
 }
