@@ -1,0 +1,68 @@
+.statistics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 1340px;
+  background: #000;
+  .statistics_p {
+    color: #FFF;
+    font-family: Angry;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    padding-top: 120px;
+    .statistics_p_indicators {
+      display: inline-block;
+      background: #EAD61E;
+      transform: rotate(-1deg);
+      color: #000;
+    }
+    .statistics_p_achievements {
+      display: inline-block;
+      background: #EAD61E;
+      transform: rotate(1deg);
+      color: #000;
+    }
+  }
+  .statistics_table {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    .statistics_table_img {
+      width: 173px;
+      height: 163px;
+    }
+    .statistics_table_people-icon {
+      width: 60px;
+      height: 60px;
+    }
+    .statistics_table_people-count {
+      color: #FFF;
+      text-align: center;
+      font-family: Angry;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+    }
+    .statistics_table_people-text {
+      color: #FFF;
+      text-align: center;
+      font-family: Circe;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;  
+    }
+    .table_label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .divider {
+      width: 100%;
+      border: 1px solid #565656;
+    }
+  }
+}

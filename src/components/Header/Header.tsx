@@ -9,7 +9,13 @@ import present2 from "../../assets/present2.png";
 import { Link, NavLink } from "react-router-dom";
 import "./Header.scss";
 
-export const Header: FC = () => {
+interface IHeader {
+  pageName?: string;
+}
+
+export const Header: FC<IHeader> = (props) => {
+  const pageName = props.pageName;
+
   return (
     <header className="dicamp-header">
       <nav className="dicamp-header_nav">
@@ -48,6 +54,13 @@ export const Header: FC = () => {
               </NavLink>
             </li>
           </div>
+          {pageName === "business" ? (
+            <button className="business_button" type="button">
+              Подать заявку
+            </button>
+          ) : (
+            <div></div>
+          )}
         </ul>
       </nav>
       <div className="prices-info">

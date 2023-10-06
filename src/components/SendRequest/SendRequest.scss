@@ -1,0 +1,15 @@
+.sending-req {
+  background: url("../../assets/background_req.png"), lightgray 50% / cover no-repeat;
+  mix-blend-mode: multiply;
+  height: 1301px;
+  .sending-req_info {
+    .sending-req_info_p {
+      color: #000;
+      font-family: Angry;
+      font-size: 50px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+    }
+  }
+}
