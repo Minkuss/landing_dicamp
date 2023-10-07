@@ -1,33 +1,50 @@
-.dicamp-thirdMission {
+.thirdMission {
     display: flex;
-    width: 100%;
-    margin: 0; 
-    padding: 0;
-    flex-shrink: 0;
+    justify-content: space-evenly;
+    height: 360px;
     background: url(../../assets/backGroundPaper.jfif), lightgray 50% / cover no-repeat;
-    .dicamp-thirdMission_ul1 {
-        margin-top: 5%;
-        margin-left: 10%;
-        list-style-type: none;
-    }
-    .dicamp-thirdMission_ul_span1 {
-        color: rgb(0, 0, 0);
-        font-family: Angry;
-        font-size: 40px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 140%; /* 56px */
-        .dicamp-thirdMission_ul_span2 {
-            background-color: yellow;
+    .thirdMission_text {
+        display: flex;
+        flex-direction: column;
+        .thirdMission_text_h2 {
+            display: flex;
+            flex-direction: column;
+            color: #000;
+            font-family: Angry;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+            .thirdMission_text_h2_signed {
+                background: #EAD61E;
+                transform: rotate(1deg);
+                padding: 0 12px 0 12px
+            }
         }
     }
-    .dicamp-thirdMission_ul_p {
-        color: #dd0808;
-        font-family: Circe;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 120%; /* 19.2px */
+    .thirdMission_ul {
+        list-style-type: none;
+        .thirdMission_ul_li {
+            display: flex;
+            align-items: center;
+            &:first-child {
+                margin-top: 43px;
+            }
+        }
+        .thirdMission_ul_li span {
+            color: #000;
+            font-family: Circe;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            margin-left: 16px;
+            max-width: 600px;
+            margin-top: 20px;
+            & span {
+                font-weight: 700;
+            }
+        }
     }
     .dicamp-thirdMission_ul_a {
         color: #240EB9;
@@ -35,38 +52,13 @@
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
-        line-height: 120%; /* 19.2px */
+        line-height: 120%;
+        border-bottom: 2px dashed #240EB9;
     }
-    .dicamp-thirdMission_img {
-        margin-left: 3%;
-        margin-top: 7%;
+    .thirdMission_img {
         width: 123px;
         height: 279px;
-        //background: lightgray 50% / cover no-repeat;
-    }
-    .dicamp-thirdMission_ul {
-        align-self: center;
-        list-style-type: none;
-        .dicamp-thirdMission_ul_div {
-            display: flex;
-            align-items: center;
-            margin-top: 5px;
-            .dicamp-thirdMission_ul_span {
-                vertical-align: center;
-                flex: 1, 1, 0;
-                display: inline-flex;
-                color: #000;
-                font-family: Circe;
-                font-size: 17px;
-                font-style: normal;
-                line-height: 120%; /* 31.2px */
-                max-width: 60%;
-                margin-right: 7%;
-            }
-            .dicamp-thirdMission_ul_img {
-                width: 48px;
-                height: 48px;
-            }
-        }
+        position: relative;
+        top: 82px;
     }
 }
