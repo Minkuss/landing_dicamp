@@ -1,12 +1,91 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import "./Statistics.scss";
 import cup from "../../assets/cup1.png";
 import people from "../../assets/people.png";
 import active from "../../assets/active.png";
 import plus from "../../assets/plus.png";
 import minus from "../../assets/minus.png";
+import axios from "axios";
+import { apiDvgups, apiTogu, apiAnother } from "../../../config";
 
 export const Statistics: FC = () => {
+  const [info, setInfo] = useState<
+    {
+      name: string;
+      users: number;
+      goals: number;
+      events: number;
+      spending: number;
+    }[]
+  >([]);
+
+  useEffect(() => {
+    axios.all(apiDvgups.map((endpoint) => axios.get(endpoint))).then(
+      axios.spread(
+        (
+          { data: users },
+          { data: goals },
+          { data: events },
+          { data: spending }
+        ) => {
+          setInfo([
+            ...info,
+            {
+              name: "ДВГУПС",
+              users: users[0].value,
+              goals: goals[0].value,
+              events: events[0].value,
+              spending: spending[0].value,
+            },
+          ]);
+        }
+      )
+    );
+    axios.all(apiTogu.map((endpoint) => axios.get(endpoint))).then(
+      axios.spread(
+        (
+          { data: users },
+          { data: goals },
+          { data: events },
+          { data: spending }
+        ) => {
+          setInfo([
+            ...info,
+            {
+              name: "ТОГУ",
+              users: users[0].value,
+              goals: goals[0].value,
+              events: events[0].value,
+              spending: spending[0].value,
+            },
+          ]);
+        }
+      )
+    );
+    axios.all(apiAnother.map((endpoint) => axios.get(endpoint))).then(
+      axios.spread(
+        (
+          { data: users },
+          { data: goals },
+          { data: events },
+          { data: spending }
+        ) => {
+          setInfo([
+            ...info,
+            {
+              name: "Другой ВУЗ",
+              users: users[0].value,
+              goals: goals[0].value,
+              events: events[0].value,
+              spending: spending[0].value,
+            },
+          ]);
+        }
+      )
+    );
+    console.log(info);
+  }, []);
+
   return (
     <div className="statistics">
       <p className="statistics_p">
@@ -78,7 +157,7 @@ export const Statistics: FC = () => {
         </tr>
         <div className="divider"></div>
         <tr>
-          <td>text1</td>
+          <td>{info[0]?.users}</td>
           <td>text2</td>
         </tr>
       </table>

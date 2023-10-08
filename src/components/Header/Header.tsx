@@ -6,7 +6,7 @@ import google from "../../assets/google_play.png";
 import apple from "../../assets/app_store.png";
 import qr_code from "../../assets/QR.png";
 import present2 from "../../assets/present2.png";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Header.scss";
 
 interface IHeader {
@@ -105,4 +105,4 @@ export const Header: FC<IHeader> = (props) => {
       </div>
     </header>
   );
-}
+};

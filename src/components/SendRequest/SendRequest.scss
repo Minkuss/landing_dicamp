@@ -34,9 +34,7 @@
       line-height: 140%;
     }
     .sending-req_info_img {
-      position: absolute;
-      top: 5055px;
-      left: 344px;
+      position: relative;
       width: 525px;
       height: 330px;
     }
@@ -48,8 +46,36 @@
     margin-top: 100px;
     .sending-req_form_inp {
       all: unset;
-      border: 1px solid #000;
+      border: 1px solid #908787;
       height: 60px;
+      margin-top: 16px;
+      color: #000;
+      font-family: Circe;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%;
+      padding-left: 24px;
+      &:focus {
+        border: 1px solid #000;
+      }
+    }
+    .sending-req_form_field {
+      border: 1px solid #908787;
+      height: 60px;
+      margin-top: 16px;
+      .sending-req_form_field_inp {
+        all: unset;
+        height: 100%;
+        width: 100%;
+        color: #000;
+        font-family: Circe;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        padding-left: 11px;
+      }
     }
   }
 }

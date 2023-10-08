@@ -1,10 +1,9 @@
 import { FC } from "react";
-import { Link, NavLink } from "react-router-dom";
 import fingers from "../../assets/ThirdMission.png";
 import bag from "../../assets/bag.png";
 import chart from "../../assets/chart.png";
 import money from "../../assets/money.png";
-import { Button, Card, Classes, Popover } from "@blueprintjs/core";
+import { Card, Popover } from "@blueprintjs/core";
 import "./ThirdMission.scss";
 
 export const ThirdMission: FC = () => {

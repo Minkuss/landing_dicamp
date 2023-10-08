@@ -18,9 +18,19 @@ export const SendRequest: FC = () => {
         <img className="sending-req_info_img" src={convert} alt="Конверт" />
       </div>
       <div className="sending-req_form">
-        <input className="sending-req_form_inp" type="text" />
-        <input className="sending-req_form_inp" type="text" />
-        <input className="sending-req_form_inp" type="text" />
+        <fieldset className="sending-req_form_field">
+          <legend>ФИО</legend>
+          <input className="sending-req_form_field_inp" type="text" />
+        </fieldset>
+        <fieldset className="sending-req_form_field">
+          <legend>Email</legend>
+          <input className="sending-req_form_field_inp" type="text" />
+        </fieldset>
+        <input
+          placeholder="Компания"
+          className="sending-req_form_inp"
+          type="text"
+        />
         <textarea className="sending-req_form_text"></textarea>
         <input
           className="sending-req_form_check"
